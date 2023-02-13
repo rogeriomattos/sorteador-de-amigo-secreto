@@ -1,11 +1,10 @@
-import { screen, render, fireEvent } from "@testing-library/react";
 import React from "react";
-import { act } from "react-dom/test-utils";
+import { screen, render, fireEvent } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
-import { useListaParticipantes } from "../state/hooks/useListaParticipantes";
+import { useListaParticipantes } from "../../state/hooks/useListaParticipantes";
 import Rodape from './Rodape';
 
-jest.mock('../state/hooks/useListaParticipantes', () => ({
+jest.mock('../../state/hooks/useListaParticipantes', () => ({
     useListaParticipantes: jest.fn()
 }));
 

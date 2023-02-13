@@ -1,6 +1,6 @@
 import React  from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import Formulario from "./Formulatio";
+import Formulario from "./Formulario";
 import { RecoilRoot } from "recoil";
 import { act } from "react-dom/test-utils";
 
@@ -12,7 +12,7 @@ describe('O comportamento do formulario.tsx', () => {
             </RecoilRoot>
         );
     
-        const input = screen.getByPlaceholderText('insira os nomes dos participantes');
+        const input = screen.getByPlaceholderText('Insira os nomes dos participantes');
         const botao = screen.getByRole('button');
     
         expect(input).toBeInTheDocument();
@@ -26,7 +26,7 @@ describe('O comportamento do formulario.tsx', () => {
             </RecoilRoot>
         );
     
-        const input = screen.getByPlaceholderText('insira os nomes dos participantes');
+        const input = screen.getByPlaceholderText('Insira os nomes dos participantes');
         const botao = screen.getByRole('button');
     
         fireEvent.change(input, { target: { value: 'Rogerio Almeida' } });
@@ -45,7 +45,7 @@ describe('O comportamento do formulario.tsx', () => {
             </RecoilRoot>
         );
     
-        const input = screen.getByPlaceholderText('insira os nomes dos participantes');
+        const input = screen.getByPlaceholderText('Insira os nomes dos participantes');
         const botao = screen.getByRole('button');
     
         fireEvent.change(input, { target: { value: 'Rogerio Almeida' } });
@@ -70,7 +70,7 @@ describe('O comportamento do formulario.tsx', () => {
             </RecoilRoot>
         );
     
-        const input = screen.getByPlaceholderText('insira os nomes dos participantes');
+        const input = screen.getByPlaceholderText('Insira os nomes dos participantes');
         const botao = screen.getByRole('button');
     
         fireEvent.change(input, { target: { value: 'Rogerio Almeida' } });
